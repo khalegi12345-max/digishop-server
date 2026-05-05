@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.log('خطا:', err))
 
 const authRoutes = require('./routes/auth')
-const cartRoutes = require('./routes/cart')
+const cartRoutes = require('./routes/Cart')
 
 app.use('/api/auth', authRoutes)
 app.use('/api/cart', cartRoutes)
