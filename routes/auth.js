@@ -47,11 +47,10 @@ router.post("/login", async (req, res) => {
 
     // توکن بساز
     const token = jwt.sign(
-      { id: user._id, email: user.email },
+      { id: user._id, email: user.email, isAdmin: user.isAdmin },
       process.env.JWT_SECRET,
       { expiresIn: "7d" },
     );
-
     res.json({ token, user: { name: user.name, email: user.email } });
   } catch (err) {
     res.status(500).json({ message: "خطای سرور!" });
