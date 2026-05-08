@@ -29,5 +29,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("سرور روی پورت " + PORT + " کار میکنه");
 });
-const productRoutes = require("./routes/products");
-app.use("/api/products", productRoutes);
+const productRoutes = require("./routes/Products");
+app.use("/api/Products", productRoutes);
